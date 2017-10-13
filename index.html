@@ -1,9 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>FrontendTest</title>
+	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
+	<header class="header">
+		<div class="container">
+			<div class="header__logo">
+				<img src="img/locastic-logo-white.svg" />
+			</div>
+			<nav class="mainNavContainer">
+				<div class="mainNavCollapse" id="mainNavCollapse"><a class="mainNavCollapseIcon" onclick="toggleMainNav()"></a></div>
+				<ul class="mainNav" id="mainNav">
+					<li class="mainNavClose"><a class="mainNavCloseIcon" onclick="toggleMainNav()"></a></li>
+					<li class="mainNav__item"><a href="#">Home</a></li>
+					<div class="dropdown">
+						<li class="mainNav__item mainNav__item--dropdown"><a href="#">Works</a>
+							<ul class="mainNavDropdown">
+								<li class="mainNavDropdown__item"><a href="#">Manistra na pome</a></li>
+								<li class="mainNavDropdown__item"><a href="#">Biftek - Medium rare+</a></li>
+								<li class="mainNavDropdown__item"><a href="#">Picigin 2016</a></li>
+								<li class="mainNavDropdown__item"><a href="#">Još jedan link eto tako</a></li>
+							</ul>
+						</li>
+					</div>
+					<li class="mainNav__item"><a href="#">About Us</a></li>
+					<li class="mainNav__item"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="header__slider">	
+		<div class="w3-content w3-display-container">
+			<div class="w3-display-container mySlides">
+			  <img src="img/slider-image.png">
+			  <div class="abs w3-large w3-container w3-padding-16">
+			    <p>Moj najlipši naslov ikad</p>
+			  </div>
+			</div>
+			<div class="w3-display-container mySlides">
+			  <img src="img/slider-image.png">
+			  <div class="abs w3-large w3-container w3-padding-16">
+			    <p>Moj najlipši naslov ikad 2</p>
+			  </div>
+			</div>
+			<div class="w3-display-container mySlides">
+			  <img src="img/slider-image.png">
+			  <div class="abs w3-large w3-container w3-padding-16">
+			    <p>Moj najlipši naslov ikad 3</p>
+			  </div>
+			</div>
+			 <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+			   <span class="w3-badge demo w3-border white-dot w3-hover-white" onclick="currentDiv(1)"></span>
+			   <span class="w3-badge demo w3-border white-dot w3-hover-white" onclick="currentDiv(2)"></span>
+			   <span class="w3-badge demo w3-border white-dot w3-hover-white" onclick="currentDiv(3)"></span>
+			 </div>
+		</div>
+	</div>
+	<div class="mainContainer">
+		<div class="mainContent">
+			<div class="mainContent__item">
+				<img class="mainContent__img" src="img/content-image.png" />
+				<h2 class="mainContent__heading">Comment On The Importance Of Human Life</h2>
+				<p class="mainContent__text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+				</p>
+				<a class="mainContent__link" href="#">View full article</a>
+			</div>
+			<div class="mainContent__item">
+				<img class="mainContent__img" src="img/content-image.png" />
+				<h2 class="mainContent__heading">Comment On The Importance Of Human Life</h2>
+				<p class="mainContent__text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+				</p>
+				<a class="mainContent__link" href="#">View full article</a>
+			</div>
+			<div class="mainContent__item">
+				<img class="mainContent__img" src="img/content-image.png" />
+				<h2 class="mainContent__heading">Comment On The Importance Of Human Life</h2>
+				<p class="mainContent__text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+				</p>
+				<a class="mainContent__link" href="#">View full article</a>
+			</div>
+		</div>
 
+		<div class="loadMore">
+			<a href="#">Load more</a>
+		</div>
+	</div>
+
+	<div class="form">
+		<p>Contact Form</p>
+		<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+			<div class="row">
+				<label for="name">Contact name</label>
+				<input id="name" class="input" name="name" type="text" value="" size="30" />
+			</div>
+			<div class="row">
+				<label for="email">Email address</label>
+				<input id="email" class="input" name="email" type="text" value="" size="30" />
+			</div>
+			<div class="row">
+				<label for="message">Message</label>
+				<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea>
+			</div>
+			<input id="submit_button" type="submit" value="Send email" />
+		</form>						
+		
+	</div>
+
+	<footer>
+		<p class="footer__copyright">2017 Locastic Test Page</p>
+		<p class="footer__developer">By Frontend Developer</p>
+	</footer>
+
+	<script src="dist/js/main.min.js"></script>
 </body>
 </html>
