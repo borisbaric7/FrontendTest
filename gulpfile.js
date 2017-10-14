@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename');
 	gulpSASS = require('gulp-sass');
 	minifyCSS = require('gulp-clean-css');
+	autoprefixer = require('gulp-autoprefixer');
 
 //////////////////////////////////////
 // Scripts
@@ -24,6 +25,7 @@ gulp.task('sass-css', function() {
 	gulp.src('source/css/**/*.scss')
 	.pipe(rename({suffix:'.min'}))
 	.pipe(gulpSASS())
+	.pipe(autoprefixer('last 2 versions'))
 	.pipe(minifyCSS())
 	.pipe(gulp.dest('dist/css'));
 });
@@ -32,7 +34,7 @@ gulp.task('sass-css', function() {
 // Watch Tasks
 //////////////////////////////////////
 gulp.task('watch', function() {
-	gulp.watch('source/js/**/*.js', 'source/css/**/*.scss', ['scripts', 'sass-css']);
+	gulp.watch('source/js/**/*.js', ['scripts']);
 });
 
 //////////////////////////////////////
